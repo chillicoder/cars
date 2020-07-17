@@ -1,4 +1,4 @@
-module github.com/chillicoder/bookstore
+module github.com/chillicoder/cars
 
 go 1.14
 
