@@ -8,11 +8,6 @@
           "value": "masterbuilderusr:masterbuilderpwd8342@(masterbuilder-backend-aurora-db-cluster.cluster-cyvdcg4q9tne.ca-central-1.rds.amazonaws.com:3306)/masterbuilder_db?charset=utf8&parseTime=True"
         }
       ],
-      "options": {
-        "awslogs-group": "/ecs/masterbuilder-backend-containers-service",
-        "awslogs-region": "ca-central-1",
-        "awslogs-stream-prefix": "ecs"
-      },
       "name": "cars-container-definition",
       "image": "563305723878.dkr.ecr.ca-central-1.amazonaws.com/cars:latest",
       "essential": true,
