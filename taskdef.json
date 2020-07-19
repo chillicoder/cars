@@ -14,7 +14,7 @@
         "awslogs-stream-prefix": "ecs"
       },
       "name": "cars-container-definition",
-      "image": "<IMAGE1_NAME>",
+      "image": "563305723878.dkr.ecr.ca-central-1.amazonaws.com/cars:latest",
       "essential": true,
       "portMappings": [
         {
