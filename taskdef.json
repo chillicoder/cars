@@ -1,0 +1,35 @@
+{
+  "executionRoleArn": "arn:aws:iam::563305723878:role/masterbuilder-backend-containers-TaskExecutionRole-H7D9YX6Q5W5C",
+  "containerDefinitions": [
+    {
+      "environment": [
+        {
+          "name": "DB_URL",
+          "value": "masterbuilderusr:masterbuilderpwd8342@(masterbuilder-backend-aurora-db-cluster.cluster-cyvdcg4q9tne.ca-central-1.rds.amazonaws.com:3306)/masterbuilder_db?charset=utf8&parseTime=True"
+        }
+      ],
+      "options": {
+        "awslogs-group": "/ecs/masterbuilder-backend-containers-service",
+        "awslogs-region": "ca-central-1",
+        "awslogs-stream-prefix": "ecs"
+      },
+      "name": "cars-container-definition",
+      "image": "<IMAGE1_NAME>",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "protocol": "tcp",
+          "containerPort": 8080
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
+  "family": "masterbuilder-backend-containers"
+}
