@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region ca-central-1 | docker login --username masterbuilder --password-stdin 563305723878.dkr.ecr.ca-central-1.amazonaws.com/cars
+      - aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 563305723878.dkr.ecr.ca-central-1.amazonaws.com/cars
       - REPOSITORY_URI=563305723878.dkr.ecr.ca-central-1.amazonaws.com/cars
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
